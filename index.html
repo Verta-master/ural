@@ -6,6 +6,7 @@
   <meta  name="viewport" content="width=device-width,initial-scale=1">
   <title>№1 на рынке по поставке противопожарного оборудования</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/css/swiper.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -18,7 +19,7 @@
       <div class="header__block">
         <p class="header__title header__title--time">Режим работы</p>
         <p>Пн-Пт с 9:00 до 17:00</p>
-        <a href="#" class="btn" download>Скачать прайс лист</a>
+        <a href="#" class="btn header__btn" download>Скачать прайс лист</a>
         <form action="#" method="get" class="search">
           <input type="text" class="search__input" placeholder="Поиск товара">
           <button type="submit" class="search__btn"></button>
@@ -31,54 +32,60 @@
         <address>г. Москва, уд. Хабарова, д.2, офис 14-15</address>
         <a href="#" class="header__link">Смотреть на карте</a>
       </div>
-      <div class="header__block">
+      <div class="header__block header__block--right">
         <a href="mailto:uralptv@uralptv.ru" class="header__mail">uralptv@uralptv.ru</a>
         <a href="tel:+73513264001" class="header__phone">+7 (3513)26-40-01</a>
-        <a href="#" class="header__call">Заказать звонок</a>
+        <a data-fancybox data-src="#call" href="javascript:;" class="header__call">Заказать звонок</a>
       </div>
     </div>
     <nav class="menu">
-      <ul class="menu__list">
-        <li class="menu__item">
-          <a href="#">О компании</a>
-        </li>
-        <li class="menu__item">
-          <a href="#">Продукция</a>
-        </li>
-        <li class="menu__item">
-          <a href="#">Услуги</a>
-        </li>
-        <li class="menu__item">
-          <a href="#">Доставка</a>
-        </li>
-        <li class="menu__item">
-          <a href="#">Продажа</a>
-          <button type="button" class="menu__down">&rsaquo;</button>
-          <ul class="menu__sublist">
-            <li class="menu__subitem"><a href="#">Пункт 1</a></li>
-            <li class="menu__subitem"><a href="#">Пункт 2</a></li>
-            <li class="menu__subitem"><a href="#">Пункт 3</a></li>
-          </ul>
-        </li>
-        <li class="menu__item">
-          <a href="#">Новости</a>
-          <button type="button" class="menu__down">&rsaquo;</button>
-          <ul class="menu__sublist">
-            <li class="menu__subitem"><a href="#">Пункт 1</a></li>
-            <li class="menu__subitem"><a href="#">Пункт 2</a></li>
-            <li class="menu__subitem"><a href="#">Пункт 3</a></li>
-          </ul>
-        </li>
-        <li class="menu__item">
-          <a href="#">Контакты</a>
-          <button type="button" class="menu__down">&rsaquo;</button>
-          <ul class="menu__sublist">
-            <li class="menu__subitem"><a href="#">Пункт 1</a></li>
-            <li class="menu__subitem"><a href="#">Пункт 2</a></li>
-            <li class="menu__subitem"><a href="#">Пункт 3</a></li>
-          </ul>
-        </li>
-      </ul>
+      <div class="wrapper">
+        <button type="button" class="menu__btn" title="Меню"></button>
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a href="#" class="menu__link">О компании</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">Продукция</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">Услуги</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">Доставка</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">Продажа
+              <span class="menu__down">&rsaquo;</span>
+            </a>
+            <ul class="menu__sublist">
+              <li class="menu__subitem"><a href="#">Пункт 1</a></li>
+              <li class="menu__subitem"><a href="#">Пункт 2</a></li>
+              <li class="menu__subitem"><a href="#">Пункт 3</a></li>
+            </ul>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">Новости
+              <span class="menu__down">&rsaquo;</span>
+            </a>
+            <ul class="menu__sublist">
+              <li class="menu__subitem"><a href="#">Пункт 1</a></li>
+              <li class="menu__subitem"><a href="#">Пункт 2</a></li>
+              <li class="menu__subitem"><a href="#">Пункт 3</a></li>
+            </ul>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">Контакты
+              <span class="menu__down">&rsaquo;</span>
+            </a>
+            <ul class="menu__sublist">
+              <li class="menu__subitem"><a href="#">Пункт 1</a></li>
+              <li class="menu__subitem"><a href="#">Пункт 2</a></li>
+              <li class="menu__subitem"><a href="#">Пункт 3</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </nav>
   </header>
   
@@ -287,7 +294,7 @@
     <section class="feedback">
       <div class="wrapper">
         <p class="title-h2">Остались вопросы? Мы свяжемся с Вами</p>
-        <form action="#" method="post" class="form">
+        <form action="#" method="post" class="form form--feedback">
           <input type="text" class="form__input" placeholder="Имя">
           <input type="email" class="form__input" placeholder="E-mail или телефон">
           <input type="text" class="form__input" placeholder="Введите вопрос">
@@ -333,7 +340,20 @@
     </div>
   </footer>
   
+  <!-- Modal window -->
+  <div style="display: none;" id="call" class="modal">
+    <p class="title-h2">Оставьте заявку</p>
+    <form action="#" method="post" class="form">
+      <input type="text" class="form__input" placeholder="ФИО">
+      <input type="tel" class="form__input" placeholder="Телефон">
+      <input type="email" class="form__input" placeholder="E-mail">
+      <button type="submit" class="btn">Оставить заявку</button>
+      <p>Отпавляя форму, я даю согласие на обработку <a href="#">персональных даных</a></p>
+    </form>
+  </div>
+  
   <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/js/swiper.min.js"></script>
 
   <!-- Sliders -->

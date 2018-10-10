@@ -1,0 +1,139 @@
+.header__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.header__title {
+  margin-top: 0;
+  position: relative;
+  color: #212121;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 33px;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: -30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  
+  &--time::before {
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/icon-clock.png);
+  }
+  
+  &--address::before {
+    width: 19px;
+    height: 27px;
+    background-image: url(../img/icon-pin.png);
+  }
+}
+
+.header__btn {
+  margin-bottom: 25px;
+}
+
+.header__mail {
+  display: block;
+  position: relative;
+  padding-left: 45px;
+  margin-bottom: 25px;
+  font-size: 19px;
+  .transition();
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 19px;
+    background-image: url(../img/icon-mail.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  &:hover,
+  &:active {
+    color: @red-font;
+    .transition();
+  }
+}
+
+.header__phone {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 25px;
+  font-size: 19px;
+  .transition();
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    background-image: url(../img/icon-phone.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  &:hover,
+  &:active {
+    color: @red-font;
+    .transition();
+  }
+}
+
+.header__call {
+  width: 180px;
+  height: 37px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  color: @red-font;
+  border-radius: 2px;
+  border: 1px solid @red-font;
+  .transition();
+  
+  &:hover,
+  &:active {
+    border-color: #000;
+    color: #000;
+    .transition();
+  }
+}
+
+.header__block {
+  &--right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+  
+  address {
+    display: block;
+    margin-bottom: 15px;
+    font-style: normal;
+  }
+}
+
+.header__link {
+  color: #016fa2;
+  
+  &:hover,
+  &:active {
+    text-decoration: underline;
+  }
+}
