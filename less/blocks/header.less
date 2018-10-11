@@ -3,11 +3,11 @@
   justify-content: space-between;
   align-items: flex-start;
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 12px;
 }
 
 .header__title {
-  margin-top: 0;
+  margin: 0;
   position: relative;
   color: #212121;
   font-size: 18px;
@@ -18,7 +18,7 @@
     content: "";
     position: absolute;
     top: 5px;
-    left: -30px;
+    left: -23px;
     background-size: contain;
     background-repeat: no-repeat;
   }
@@ -26,6 +26,7 @@
   &--time::before {
     width: 20px;
     height: 20px;
+    left: -27px;
     background-image: url(../img/icon-clock.png);
   }
   
@@ -37,21 +38,22 @@
 }
 
 .header__btn {
-  margin-bottom: 25px;
+  margin-top: 20px;
+  margin-bottom: 23px;
 }
 
 .header__mail {
   display: block;
   position: relative;
-  padding-left: 45px;
-  margin-bottom: 25px;
+  padding-left: 48px;
+  margin-bottom: 30px;
   font-size: 19px;
   .transition();
   
   &::before {
     content: "";
     position: absolute;
-    top: 0;
+    top: 2px;
     left: 0;
     width: 25px;
     height: 19px;
@@ -71,7 +73,7 @@
   display: block;
   position: relative;
   padding-left: 35px;
-  margin-bottom: 25px;
+  margin-bottom: 35px;
   font-size: 19px;
   .transition();
   
@@ -115,11 +117,24 @@
 }
 
 .header__block {
+  padding-top: 15px;
+  
   &--right {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-end;
+  }
+  
+  &--time {
+    margin-right: auto;
+    margin-left: 25px;
+  }
+  
+  &--address {
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 10px;
   }
   
   address {
