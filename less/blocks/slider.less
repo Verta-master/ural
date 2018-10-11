@@ -1,0 +1,141 @@
+.slider {
+  .swiper-wrapper {
+    .reset();
+    list-style: none;
+  }
+  
+  .swiper-slide {
+    position: relative;
+    box-sizing: border-box;
+    height: 780px;
+    
+    img {
+      display: block;
+      height: 100%;
+      max-width: none;
+      object-fit: cover;
+    }
+  }
+  
+  p {
+    margin: 0;
+    padding: 25px;
+    padding-right: 90px;
+    font-size: 17px;
+    line-height: 23px;
+    background-color: rgba(255, 255, 255, 0.71);
+  }
+  .slider__title {
+    margin-bottom: 10px;
+    padding-right: 25px;
+    padding: 10px 25px;
+    font-size: 33px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #cc0000;
+  }
+  
+  .swiper-container-horizontal>.swiper-pagination-bullets {
+    bottom: 38px;
+  }
+}
+
+.slider__info {
+  position: absolute;
+  top: 50%;
+  left: ~"calc(50% - 585px)";
+  transform: translateY(-50%);
+  width: 632px;
+}
+
+.slider__link {
+  position: absolute;
+  bottom: -55px;
+  right: -30px;
+  width: 107px;
+  height: 107px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  font-size: 15px;
+  line-height: 22px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 50%;
+  background-image: linear-gradient(137deg, rgb(204,0,0) 0%, rgb(229,75,75) 69%, rgb(253,150,150) 100%);
+  
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0);
+    border: 17px solid rgba(204, 0, 0, 0.29);
+  }
+  
+  &:hover,
+  &:active {
+    &::after {
+      animation: pulse 1.5s ease infinite;
+    }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    border-width: 17px;
+  }
+  50% {
+    border-width: 0;
+  }
+  100% {
+    border-width: 17px;
+  }
+}
+
+.slider__prev {
+  background-image: url(../img/icon-prev.png);
+  background-size: 17px 46px;
+  outline: none;
+}
+
+.slider__next {
+  background-image: url(../img/icon-next.png);
+  background-size: 17px 46px;
+  outline: none;
+}
+
+.slider__pagination {
+  .swiper-pagination-bullet {
+    width: 24px;
+    height: 24px;
+    margin-left: 12px;
+    margin-right: 12px;
+    background-color: rgba(255,255,255,0);
+    border: 2px solid #d2d2d2;
+    opacity: 1;
+    outline: none;
+  }
+  .swiper-pagination-bullet-active {
+    position: relative;
+    
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      width: 13px;
+      height: 13px;
+      background-color: #d2d2d2;
+    }
+  }
+}

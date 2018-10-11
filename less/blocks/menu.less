@@ -26,6 +26,10 @@
     background-color: #000;
     color: #fff;
     .transition();
+    
+    .menu__link span {
+      border-color: #fff;
+    }
   }
   
   &:hover {
@@ -50,14 +54,22 @@
   align-items: center;
   font-size: 18px;
   
-  span {
+  i {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 25px;
     height: 25px;
     line-height: 25px;
+    font-style: normal;
     transform: rotate(90deg);
+  }
+  
+  span {
+    display: block;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border-bottom: 1px solid rgba(255,255,255,0);
   }
 }
 
@@ -75,11 +87,17 @@
   list-style: none;
   width: 210px;
   padding: 25px;
+  padding-bottom: 15px;
   background-color: #000;
 }
 
 .menu__subitem {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   color: #fff;
   font-size: 15px;
+  
+  &:hover,
+  &:active {
+    text-decoration: underline;
+  }
 }
