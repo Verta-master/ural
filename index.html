@@ -43,20 +43,20 @@
         <button type="button" class="menu__btn" title="Меню"></button>
         <ul class="menu__list">
           <li class="menu__item">
-            <a href="#" class="menu__link">О компании</a>
+            <a href="#" class="menu__link"><span>О компании</span></a>
           </li>
           <li class="menu__item">
-            <a href="#" class="menu__link">Продукция</a>
+            <a href="#" class="menu__link"><span>Продукция</span></a>
           </li>
           <li class="menu__item">
-            <a href="#" class="menu__link">Услуги</a>
+            <a href="#" class="menu__link"><span>Услуги</span></a>
           </li>
           <li class="menu__item">
-            <a href="#" class="menu__link">Доставка</a>
+            <a href="#" class="menu__link"><span>Доставка</span></a>
           </li>
           <li class="menu__item">
-            <a href="#" class="menu__link">Продажа
-              <span class="menu__down">&rsaquo;</span>
+            <a href="#" class="menu__link"><span>Продажа</span>
+              <i class="menu__down">&rsaquo;</i>
             </a>
             <ul class="menu__sublist">
               <li class="menu__subitem"><a href="#">Пункт 1</a></li>
@@ -65,8 +65,8 @@
             </ul>
           </li>
           <li class="menu__item">
-            <a href="#" class="menu__link">Новости
-              <span class="menu__down">&rsaquo;</span>
+            <a href="#" class="menu__link"><span>Новости</span>
+              <i class="menu__down">&rsaquo;</i>
             </a>
             <ul class="menu__sublist">
               <li class="menu__subitem"><a href="#">Пункт 1</a></li>
@@ -75,8 +75,8 @@
             </ul>
           </li>
           <li class="menu__item">
-            <a href="#" class="menu__link">Контакты
-              <span class="menu__down">&rsaquo;</span>
+            <a href="#" class="menu__link"><span>Контакты</span>
+              <i class="menu__down">&rsaquo;</i>
             </a>
             <ul class="menu__sublist">
               <li class="menu__subitem"><a href="#">Пункт 1</a></li>
@@ -91,7 +91,7 @@
   
   <main>
     <section class="slider">
-      <div class="swiper-container">
+      <div class="swiper-container slider__box">
         <ul class="swiper-wrapper">
           <li class="swiper-slide">
             <img src="img/slide-1.jpg" alt="Slider" width="1920" height="780">
@@ -101,9 +101,16 @@
               <a href="#" class="slider__link">Заявка на 142 приказ</a>
             </div>
           </li>
-          
+          <li class="swiper-slide">
+            <img src="img/slide-2.jpg" alt="Slider" width="1920" height="780">
+            <div class="slider__info">
+              <p class="slider__title">Впервые в России и только у нас</p>
+              <p>Впервые в России, только у нашей компании появилась услуга облегчающая жизнь многим производителям пожарной техники и оборудования, Вам нет теперь необходимости обзванивать все компании по наличию продукции для комплектования пожарных автомобилей, вы все сможете купить у нас, нажав 1 кнопку</p>
+              <a href="#" class="slider__link">Заявка на 142 приказ</a>
+            </div>
+          </li>
         </ul>
-        <div class="swiper-pagination"></div>
+        <div class="swiper-pagination slider__pagination"></div>
         <div class="swiper-button-prev slider__prev"></div>
         <div class="swiper-button-next slider__next"></div>
       </div>
@@ -358,9 +365,9 @@
 
   <!-- Sliders -->
   <script>
-    var mySwiper = new Swiper ('.slider', {
+    var mySwiper = new Swiper ('.slider__box', {
       pagination: {
-        el: '.swiper__pagination',
+        el: '.slider__pagination',
         clickable: true,
       },
       navigation: {
