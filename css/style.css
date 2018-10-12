@@ -1624,6 +1624,273 @@ a.breadcrumbs__link:active {
   -webkit-transition: ease-out 0.3s;
   transition: ease-out 0.3s;
 }
+.filter .title-h2 {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+.filter__link {
+  float: right;
+  color: #696969;
+  border-bottom: 1px dashed #696969;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+.filter__link:hover,
+.filter__link:active {
+  border-color: rgba(255, 255, 255, 0);
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+.filter__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+.filter__select {
+  width: 170px;
+  height: 25px;
+  margin-bottom: 8px;
+  margin-left: 9px;
+  margin-right: 9px;
+  border-radius: 2px;
+  border: 1px solid #141414;
+  cursor: pointer;
+}
+.filter__hidden,
+.filter__checkbox {
+  display: none;
+}
+.filter__label {
+  display: block;
+  position: relative;
+  font-size: 14px;
+  padding-left: 16px;
+  margin-left: 2px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+.filter__label::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 0;
+  width: 13px;
+  height: 13px;
+  border-radius: 2px;
+  border: 1px solid #141414;
+}
+.filter__label::after {
+  display: none;
+  content: "\203A";
+  position: absolute;
+  top: 0;
+  left: 5px;
+  font-size: 18px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+.filter__checkbox:checked + .filter__label::after {
+  display: block;
+}
+.filter__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+}
+.filter__item {
+  position: relative;
+  width: 270px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-right: 30px;
+  margin-bottom: 50px;
+  border-radius: 2px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 0px 13px 0px rgba(109, 109, 109, 0.2);
+          box-shadow: 0px 0px 13px 0px rgba(109, 109, 109, 0.2);
+}
+.filter__item:nth-child(4n) {
+  margin-right: 0;
+}
+.filter__img {
+  width: 100%;
+  height: 165px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.filter__info {
+  position: relative;
+  padding: 20px;
+  padding-bottom: 25px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.filter__title {
+  max-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 5px;
+  text-align: center;
+  font-weight: 700;
+}
+.filter__price {
+  margin: 0;
+  text-align: center;
+  font-size: 18px;
+  color: #f90000;
+}
+.filter__btn {
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 120px;
+  height: 26px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: #f3f2f2;
+  border: 1px solid #f3f2f2;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+.filter__btn:hover,
+.filter__btn:active {
+  border-color: #f90000;
+  background-color: #fff;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+.filter__hit {
+  position: absolute;
+  top: -30px;
+  right: -24px;
+  width: 98px;
+  height: 123px;
+  background-image: url(../img/icon-hit.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.filter__hit::before {
+  content: "Хит продаж";
+  position: absolute;
+  top: 25px;
+  left: 20px;
+  max-width: 70px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 17px;
+  font-weight: 700;
+  text-align: center;
+  -webkit-transform: rotate(15deg);
+          transform: rotate(15deg);
+}
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+a.pagination__link {
+  width: 23px;
+  height: 23px;
+  margin-left: 3px;
+  margin-right: 3px;
+  text-align: center;
+  line-height: 23px;
+}
+a.pagination__link:hover,
+a.pagination__link:active {
+  color: #f90000;
+}
+span.pagination__link {
+  width: 23px;
+  height: 23px;
+  margin-left: 3px;
+  margin-right: 3px;
+  line-height: 23px;
+  color: #fff;
+  background-color: #f90000;
+  border-radius: 50%;
+  text-align: center;
+}
+.text {
+  margin-top: 45px;
+  margin-bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  color: #303030;
+  line-height: 25px;
+}
+.text p {
+  margin: 0;
+}
+.text__column {
+  width: 49%;
+}
 @media (max-width: 1230px) {
   .wrapper {
     width: 100%;
@@ -1734,10 +2001,12 @@ a.breadcrumbs__link:active {
   .footer__block {
     margin: 0;
   }
+  .filter__list,
   .catalog__list {
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
+  .filter__item,
   .catalog__item {
     margin-right: 0;
   }
@@ -1831,6 +2100,7 @@ a.breadcrumbs__link:active {
     width: 100%;
     margin-bottom: 20px;
   }
+  .text__column,
   .news__info {
     width: 100%;
   }
@@ -1844,6 +2114,19 @@ a.breadcrumbs__link:active {
   }
   .footer__block {
     margin-bottom: 20px;
+  }
+  .text {
+    display: block;
+  }
+  .text__column {
+    margin-bottom: 10px;
+  }
+  .filter__link {
+    float: none;
+    margin-bottom: 10px;
+  }
+  .filter__wrap {
+    margin-top: 20px;
   }
 }
 @media (max-width: 480px) {
