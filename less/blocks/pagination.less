@@ -1,0 +1,32 @@
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+a.pagination__link {
+  width: 23px;
+  height: 23px;
+  margin-left: 3px;
+  margin-right: 3px;
+  text-align: center;
+  line-height: 23px;
+  
+  &:hover,
+  &:active {
+    color: @red;
+  }
+}
+
+span.pagination__link {
+  width: 23px;
+  height: 23px;
+  margin-left: 3px;
+  margin-right: 3px;
+  line-height: 23px;
+  color: #fff;
+  background-color: @red;
+  border-radius: 50%;
+  text-align: center;
+}
