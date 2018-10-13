@@ -1,0 +1,153 @@
+.card {
+  padding-top: 10px;
+  margin-bottom: 60px;
+}
+
+.card__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.card__slider {
+  width: 370px;
+  
+  .sp-image {
+    width: 268px;
+    height: 278px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000;
+    border-radius: 2px;
+  }
+  
+  .sp-thumbnail {
+    width: 70px;
+    height: 70px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000;
+    border-radius: 2px;
+  }
+  
+  .sp-full-screen-button {
+    top: 50%;
+    left: 50%;
+    right: auto;
+    transform: translate(-50%, -50%);
+    
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 34px;
+      height: 34px;
+      background-image: url(../img/icon-zoom.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+}
+
+.card__info {
+  width: 760px;
+}
+
+.card__price {
+  color: #6e6e6e;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.card__parameters {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.card__block {
+  width: 49%;
+}
+
+.card__table {
+  margin-left: auto;
+  
+  td {
+    border: 0;
+    background-color: #fff;
+  }
+  
+  td:first-child {
+    width: 110px;
+    text-align: left;
+  }
+  
+  td:last-child {
+    width: 165px;
+    text-align: right;
+    color: #525252;
+  }
+}
+
+.card__btn {
+  width: 275px;
+  font-size: 19px;
+  font-weight: 700;
+  position: relative;
+  
+  &::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 105%;
+    width: 44px;
+    height: 26px;
+    background-image: url(../img/battery.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.card__disabled {
+  width: 275px;
+  height: 39px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 19px;
+  font-weight: 700;
+  border-radius: 2px;
+  background-color: rgb(214, 214, 214);
+  border: 1px solid rgb(214, 214, 214);
+  position: relative;
+  .transition();
+  
+  &::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 105%;
+    width: 44px;
+    height: 26px;
+    background-image: url(../img/battery-empty.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  &:hover,
+  &:active {
+    background-color: #fff;
+    border-color: #000;
+    .transition();
+  }
+}
+
+.card__hidden {
+  display: none;
+}
