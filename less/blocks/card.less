@@ -11,6 +11,7 @@
 
 .card__slider {
   width: 370px;
+  padding-top: 5px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -57,26 +58,35 @@
   align-items: center;
   border: 1px solid #000;
   border-radius: 2px;
+  
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
 }
 
 .card__info {
   width: 760px;
-  min-height: 280px;
+  min-height: 285px;
   border-bottom: 1px solid rgb(232, 232, 232);
 }
 
 .card__title {
   margin-top: 0;
+  margin-bottom: 5px;
   color: #000;
   font-size: 26px;
   font-weight: 700;
-  line-height: 43px;
+  line-height: 1.5;
 }
 
 .card__price {
+  margin-top: 0;
+  margin-bottom: 0;
   color: #6e6e6e;
   font-size: 20px;
-  line-height: 25px;
+  line-height: 1.5;
 }
 
 .card__parameters {
@@ -93,10 +103,12 @@
 
 .card__table {
   margin-left: auto;
+  margin-top: 7px;
   
   td {
     border: 0;
     background-color: #fff;
+    height: 30px;
   }
   
   td:first-child {

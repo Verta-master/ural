@@ -102,6 +102,7 @@
   .reviews__item {
     margin-right: 0;
   }
+  .card__table,
   .footer__block {
     margin: 0;
   }
@@ -112,6 +113,25 @@
   .filter__item,
   .catalog__item {
     margin-right: 0;
+  }
+  .card__parameters {
+    display: block;
+  }
+  .card__info {
+    width: 50%;
+  }
+  .card__block {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .card__info {
+    border-bottom: 0;
+  }
+  .related .swiper-button-next {
+    right: 5px;
+  }
+  .related .swiper-button-prev {
+    left: 5px;
   }
 }
 
@@ -172,6 +192,31 @@
       text-align: left;
     }
   }
+  .card__wrap {
+    display: block;
+  }
+  .card__slider {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .card__info {
+    width: 100%;
+  }
+  .related__slider {
+    margin-left: auto;
+    margin-right: auto;
+    width: 576px;
+  }
+  .guest__left {
+    float: none;
+    margin-right: 0;
+  }
+  .guest__title {
+    text-align: left;
+  }
+  .guest__btn {
+    margin-left: 0;
+  }
 }
 
 //-------------------------------------
@@ -227,6 +272,12 @@
   }
   .filter__wrap {
     margin-top: 20px;
+  }
+  .related__slider {
+    width: 378px;
+  }
+  .form__message {
+    max-width: 100%;
   }
 }
 
@@ -320,5 +371,41 @@
   }
   .form--feedback {
     justify-content: center;
+  }
+  .guest__btn {
+    margin-right: 0;
+    width: 100%;
+  }
+  .guest__left {
+    .form__input {
+      width: 100%;
+    }
+  }
+  .related__slider {
+    width: 180px;
+  }
+  .card__btn::after,
+  .card__disabled::after {
+    display: none;
+  }
+  .card__slider {
+    width: 100%;
+    margin-bottom: 20px;
+    flex-direction: column-reverse;
+  }
+  .card__main {
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .card__thumbs {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .card__small {
+    margin: 5px;
   }
 }
