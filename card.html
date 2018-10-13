@@ -7,6 +7,8 @@
   <title>№1 на рынке по поставке противопожарного оборудования</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/css/swiper.min.css">
+  <link rel="stylesheet" href="css/lightslider.min.css">
+  <link rel="stylesheet" href="css/lightgallery.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -98,25 +100,33 @@
     <section class="card wrapper">
       <div class="card__wrap">
         <div class="card__slider">
-          <div class="card__thumbs">
-            <a data-fancybox="gallery" href="img/product-1.jpg" class="card__small">
-              <img src="img/product-1.jpg">
-            </a>
-            <a data-fancybox="gallery" href="img/product-2.jpg" class="card__small">
-              <img src="img/product-2.jpg">
-            </a>
-            <a data-fancybox="gallery" href="img/product-3.jpg" class="card__small">
-              <img src="img/product-3.jpg">
-            </a>
-            <a data-fancybox="gallery" href="img/product-4.jpg" class="card__small">
-              <img src="img/product-4.jpg">
-            </a>
-          </div>
-          <div class="card__main">
-            <a data-fancybox="gallery" href="img/product-1.jpg" class="card__big">
-              <img src="img/product-1.jpg">
-            </a>
-          </div>
+          <ul id="vertical">
+            <li data-thumb="img/product-1.jpg">
+              <figure class="card__big">
+                <img src="img/product-1.jpg">
+              </figure>
+            </li>
+            <li data-thumb="img/product-2.jpg">
+              <figure class="card__big">
+                <img src="img/product-2.jpg">
+              </figure>
+            </li>
+            <li data-thumb="img/product-3.jpg">
+              <figure class="card__big">
+                <img src="img/product-3.jpg">
+              </figure>
+            </li>
+            <li data-thumb="img/product-4.jpg">
+              <figure class="card__big">
+                <img src="img/product-4.jpg">
+              </figure>
+            </li>
+            <li data-thumb="img/product-5.jpg">
+              <figure class="card__big">
+                <img src="img/product-5.jpg">
+              </figure>
+            </li>
+          </ul>
         </div>
         <div class="card__info">
           <h1 class="card__title">Раструб к ОУ-1,2,3</h1>
@@ -552,43 +562,58 @@
   <script src="js/script.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/js/swiper.min.js"></script>
+  <script src="js/lightslider.min.js"></script>
+  <script src="js/lightgallery.min.js"></script>
   
   <!-- Sliders -->
   <script>
-    var mySwiper = new Swiper ('#related', {
-      navigation: {
-        nextEl: '.related__next',
-        prevEl: '.related__prev',
-      },
-      simulateTouch: false,
-      preventClicks: false,
-      preventClicksPropagation: false,
-      slidesPerView: 'auto',
-      spaceBetween: 28,
-    });
+    $(document).ready(function() {
+      var mySwiper = new Swiper ('#related', {
+        navigation: {
+          nextEl: '.related__next',
+          prevEl: '.related__prev',
+        },
+        simulateTouch: false,
+        preventClicks: false,
+        preventClicksPropagation: false,
+        slidesPerView: 'auto',
+        spaceBetween: 28,
+      });
+
+      var mySwiper = new Swiper ('#sale', {
+        navigation: {
+          nextEl: '.sale__next',
+          prevEl: '.sale__prev',
+        },
+        simulateTouch: false,
+        preventClicks: false,
+        preventClicksPropagation: false,
+        slidesPerView: 'auto',
+        spaceBetween: 28,
+      });
+
+      var mySwiper = new Swiper ('#similar', {
+        navigation: {
+          nextEl: '.similar__next',
+          prevEl: '.similar__prev',
+        },
+        simulateTouch: false,
+        preventClicks: false,
+        preventClicksPropagation: false,
+        slidesPerView: 'auto',
+        spaceBetween: 28,
+      });
     
-    var mySwiper = new Swiper ('#sale', {
-      navigation: {
-        nextEl: '.sale__next',
-        prevEl: '.sale__prev',
-      },
-      simulateTouch: false,
-      preventClicks: false,
-      preventClicksPropagation: false,
-      slidesPerView: 'auto',
-      spaceBetween: 28,
-    });
-    
-    var mySwiper = new Swiper ('#similar', {
-      navigation: {
-        nextEl: '.similar__next',
-        prevEl: '.similar__prev',
-      },
-      simulateTouch: false,
-      preventClicks: false,
-      preventClicksPropagation: false,
-      slidesPerView: 'auto',
-      spaceBetween: 28,
+      $('#vertical').lightSlider({
+        gallery: true,
+        item: 1,
+        vertical: true,
+        verticalHeight: 280,
+        vThumbWidth: 70,
+        thumbItem: 4,
+        thumbMargin: 20,
+        slideMargin: 0
+      });
     });
   </script>
 </body>
