@@ -1421,6 +1421,16 @@ table td {
   border-radius: 2px;
   border: 1px solid #000;
 }
+.form__message {
+  display: block;
+  width: 474px;
+  height: 90px;
+  min-height: 88px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 2px;
+  border: 1px solid #000;
+}
 .form__btn {
   width: 285px;
   height: 40px;
@@ -1911,10 +1921,27 @@ span.pagination__link {
 }
 .card__slider {
   width: 370px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
-.card__slider .sp-image {
-  width: 268px;
-  height: 278px;
+.card__main {
+  width: 270px;
+  height: 280px;
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.card__big {
+  width: 100%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1924,12 +1951,25 @@ span.pagination__link {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 1px solid #000;
-  border-radius: 2px;
+  position: relative;
 }
-.card__slider .sp-thumbnail {
+.card__big::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 34px;
+  height: 34px;
+  background-image: url(../img/icon-zoom.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.card__small {
   width: 70px;
   height: 70px;
+  margin-bottom: 20px;
   padding: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1943,26 +1983,17 @@ span.pagination__link {
   border: 1px solid #000;
   border-radius: 2px;
 }
-.card__slider .sp-full-screen-button {
-  top: 50%;
-  left: 50%;
-  right: auto;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-.card__slider .sp-full-screen-button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 34px;
-  height: 34px;
-  background-image: url(../img/icon-zoom.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-}
 .card__info {
   width: 760px;
+  min-height: 280px;
+  border-bottom: 1px solid #e8e8e8;
+}
+.card__title {
+  margin-top: 0;
+  color: #000;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 43px;
 }
 .card__price {
   color: #6e6e6e;
@@ -2090,6 +2121,8 @@ span.pagination__link {
 }
 .related__slider {
   padding-top: 22px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 .related__slide {
   width: 170px;
@@ -2201,6 +2234,37 @@ span.pagination__link {
 }
 .related__hidden {
   display: none;
+}
+.guest {
+  margin-bottom: 60px;
+}
+.guest time {
+  font-size: 11px;
+  font-style: italic;
+  color: #777777;
+}
+.guest__name {
+  float: left;
+  margin: 0;
+  margin-right: 50px;
+  font-size: 18px;
+}
+.guest__form {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 770px;
+}
+.guest__btn {
+  width: 285px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 19px;
+  font-weight: 700;
+  background-color: #cc0000;
+}
+.guest__left {
+  float: left;
+  margin-right: 12px;
 }
 @media (max-width: 1230px) {
   .wrapper {

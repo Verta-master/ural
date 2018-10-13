@@ -6,7 +6,6 @@
   <meta  name="viewport" content="width=device-width,initial-scale=1">
   <title>№1 на рынке по поставке противопожарного оборудования</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.css">
-  <link rel="stylesheet" href="css/slider-pro.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/css/swiper.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -99,53 +98,28 @@
     <section class="card wrapper">
       <div class="card__wrap">
         <div class="card__slider">
-          <div class="slider-pro" id="slider">
-            <div class="sp-slides">
-              <div class="sp-slide">
-                <figure class="sp-image">
-                  <img src="img/product-1.jpg">
-                </figure>
-                <figure class="sp-thumbnail">
-                  <img src="img/product-1.jpg">
-                </figure>
-              </div>
-              <div class="sp-slide">
-                <figure class="sp-image">
-                  <img src="img/product-2.jpg">
-                </figure>
-                <figure class="sp-thumbnail">
-                  <img src="img/product-2.jpg">
-                </figure>
-              </div>
-              <div class="sp-slide">
-                <figure class="sp-image">
-                  <img src="img/product-3.jpg">
-                </figure>
-                <figure class="sp-thumbnail">
-                  <img src="img/product-3.jpg">
-                </figure>
-              </div>
-              <div class="sp-slide">
-                <figure class="sp-image">
-                  <img src="img/product-4.jpg">
-                </figure>
-                <figure class="sp-thumbnail">
-                  <img src="img/product-4.jpg">
-                </figure>
-              </div>
-              <div class="sp-slide">
-                <figure class="sp-image">
-                  <img src="img/product-5.jpg">
-                </figure>
-                <figure class="sp-thumbnail">
-                  <img src="img/product-5.jpg">
-                </figure>
-              </div>
-            </div>
+          <div class="card__thumbs">
+            <a data-fancybox="gallery" href="img/product-1.jpg" class="card__small">
+              <img src="img/product-1.jpg">
+            </a>
+            <a data-fancybox="gallery" href="img/product-2.jpg" class="card__small">
+              <img src="img/product-2.jpg">
+            </a>
+            <a data-fancybox="gallery" href="img/product-3.jpg" class="card__small">
+              <img src="img/product-3.jpg">
+            </a>
+            <a data-fancybox="gallery" href="img/product-4.jpg" class="card__small">
+              <img src="img/product-4.jpg">
+            </a>
+          </div>
+          <div class="card__main">
+            <a data-fancybox="gallery" href="img/product-1.jpg" class="card__big">
+              <img src="img/product-1.jpg">
+            </a>
           </div>
         </div>
         <div class="card__info">
-          <h1 class="title-h2">Раструб к ОУ-1,2,3</h1>
+          <h1 class="card__title">Раструб к ОУ-1,2,3</h1>
           <p class="card__price">16,00 &#8381;</p>
           <div class="card__parameters">
             <div class="card__block">
@@ -489,6 +463,22 @@
         <div class="swiper-button-next similar__next"></div>
       </div>
     </section>
+    
+    <section class="guest wrapper">
+      <p class="title-h3">Отзывы</p>
+      <p class="guest__name">Гость</p>
+      <time datetime="2018-09-03">03.09.2018</time>
+      <p>Выражаем свою благодарность компании «УралПожТехВооружение» за высококвалифицированный подход и знание своего дела. Заказывали пожарное оборудование на опасный производственный объект. Всё оказалось в наличии. Произвели оплату и на следующий день уже забрали свой заказ! Спасибо!</p>
+      <form action="#" method="post" class="guest__form">
+        <p class="guest__title">Оставить отзыв</p>
+        <div class="guest__left">
+          <input type="text" class="form__input" placeholder="Имя">
+          <input type="email" class="form__input" placeholder="E-mail">
+        </div>
+        <textarea class="form__message" placeholder="Напишите что Вы думаете"></textarea>
+        <button type="submit" class="btn guest__btn">Отправить</button>
+      </form>
+    </section>
   </main>
   
   <footer class="footer">
@@ -542,33 +532,10 @@
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/script.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.js"></script>
-  <script src="js/jquery.sliderPro.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/js/swiper.min.js"></script>
   
   <!-- Sliders -->
   <script>
-    $( '#slider' ).sliderPro({
-      width: 270, 
-      height: 280,
-      orientation: 'horizontal',
-      thumbnailsPosition: 'left',
-      autoplay: false,
-      fullScreen: true,
-      fadeFullScreen: false,
-      buttons: false,
-      thumbnailWidth: 70,
-      thumbnailHeight: 70,
-      thumbnailArrows: true,
-      fadeThumbnailArrows: false,
-      imageScaleMode: 'contain',
-    });
-//    $('.sp-slide').click(function() {
-//      $('.sp-next-arrow').trigger('click');
-//    });
-//    $('.sp-slide').click(function() {
-//      $('.sp-full-screen-button').trigger('click');
-//    });
-    
     var mySwiper = new Swiper ('#related', {
       navigation: {
         nextEl: '.related__next',
@@ -578,7 +545,7 @@
       preventClicks: false,
       preventClicksPropagation: false,
       slidesPerView: 'auto',
-      spaceBetween: 30,
+      spaceBetween: 28,
     });
     
     var mySwiper = new Swiper ('#sale', {
@@ -590,7 +557,7 @@
       preventClicks: false,
       preventClicksPropagation: false,
       slidesPerView: 'auto',
-      spaceBetween: 30,
+      spaceBetween: 28,
     });
     
     var mySwiper = new Swiper ('#similar', {
@@ -602,7 +569,7 @@
       preventClicks: false,
       preventClicksPropagation: false,
       slidesPerView: 'auto',
-      spaceBetween: 30,
+      spaceBetween: 28,
     });
   </script>
 </body>
