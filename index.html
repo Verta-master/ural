@@ -95,7 +95,7 @@
             <div class="slider__info">
               <p class="slider__title">Впервые в России и только у нас</p>
               <p>Впервые в России, только у нашей компании появилась услуга облегчающая жизнь многим производителям пожарной техники и оборудования, Вам нет теперь необходимости обзванивать все компании по наличию продукции для комплектования пожарных автомобилей, вы все сможете купить у нас, нажав 1 кнопку</p>
-              <a href="#" class="slider__link">Заявка на 142 приказ</a>
+              <a data-fancybox data-src="#order" href="javascript:;" class="slider__link">Заявка на 142 приказ</a>
             </div>
           </li>
           <li class="swiper-slide">
@@ -103,7 +103,7 @@
             <div class="slider__info">
               <p class="slider__title">Впервые в России и только у нас</p>
               <p>Впервые в России, только у нашей компании появилась услуга облегчающая жизнь многим производителям пожарной техники и оборудования, Вам нет теперь необходимости обзванивать все компании по наличию продукции для комплектования пожарных автомобилей, вы все сможете купить у нас, нажав 1 кнопку</p>
-              <a href="#" class="slider__link">Заявка на 142 приказ</a>
+              <a data-fancybox data-src="#order" href="javascript:;" class="slider__link">Заявка на 142 приказ</a>
             </div>
           </li>
         </ul>
@@ -359,7 +359,7 @@
   </footer>
   
   <!-- Modal window -->
-  <div style="display: none;" id="call" class="modal">
+  <div style="display: none;" id="order" class="modal">
     <p class="title-h3">Оставьте заявку</p>
     <form action="#" method="post" class="form">
       <input type="text" class="form__input" placeholder="ФИО">
@@ -367,6 +367,18 @@
       <input type="email" class="form__input" placeholder="E-mail">
       <button type="submit" class="btn form__submit">Оставить заявку</button>
       <p>Отпавляя форму, я даю согласие на обработку <a href="#">персональных даных</a></p>
+    </form>
+  </div>
+  
+  <div style="display: none;" id="call" class="modal modal--call">
+    <p class="title-h5">Заказать обратный звонок</p>
+    <form action="#" method="post" class="form">
+      <div class="form__wrap">
+        <input type="text" class="form__input" placeholder="Имя">
+        <input type="tel" class="form__input" placeholder="Телефон">
+        <button type="submit" class="btn form__submit">Заказать звонок</button>
+      </div>
+      <p>Отпpавляя форму, я даю согласие на обработку <a href="#">персональных даных</a></p>
     </form>
   </div>
   

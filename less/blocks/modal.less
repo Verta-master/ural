@@ -1,5 +1,6 @@
 .modal {
-  max-width: 325px;
+  width: 325px;
+  border-radius: 5px;
   
   .title-h3 {
     text-align: center;
@@ -13,6 +14,31 @@
       &:active {
         text-decoration: underline;
       }
+    }
+  }
+  
+  &--call {
+    width: 436px;
+    
+    .title-h5 {
+      color: #000;
+      text-align: center;
+    }
+    
+    .form__submit {
+      font-size: 16px;
+      font-weight: 400;
+      background-color: @red-font;
+      
+      &:hover,
+      &:active {
+        background-color: #000;
+        .transition();
+      }
+    }
+    
+    p {
+      text-align: center;
     }
   }
 }

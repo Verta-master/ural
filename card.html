@@ -525,14 +525,15 @@
   </footer>
   
   <!-- Modal window -->
-  <div style="display: none;" id="call" class="modal">
-    <p class="title-h3">Оставьте заявку</p>
+  <div style="display: none;" id="call" class="modal modal--call">
+    <p class="title-h5">Заказать обратный звонок</p>
     <form action="#" method="post" class="form">
-      <input type="text" class="form__input" placeholder="ФИО">
-      <input type="tel" class="form__input" placeholder="Телефон">
-      <input type="email" class="form__input" placeholder="E-mail">
-      <button type="submit" class="btn form__submit">Оставить заявку</button>
-      <p>Отпавляя форму, я даю согласие на обработку <a href="#">персональных даных</a></p>
+      <div class="form__wrap">
+        <input type="text" class="form__input" placeholder="Имя">
+        <input type="tel" class="form__input" placeholder="Телефон">
+        <button type="submit" class="btn form__submit">Заказать звонок</button>
+      </div>
+      <p>Отпpавляя форму, я даю согласие на обработку <a href="#">персональных даных</a></p>
     </form>
   </div>
   
