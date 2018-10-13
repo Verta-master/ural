@@ -1416,6 +1416,7 @@ table td {
   display: block;
   width: 275px;
   height: 40px;
+  max-width: 100%;
   margin-bottom: 10px;
   padding: 0 10px;
   border-radius: 2px;
@@ -1441,8 +1442,14 @@ table td {
 }
 .form__submit {
   width: 100%;
+  max-width: 100%;
   font-size: 19px;
   font-weight: 700;
+}
+.form__wrap {
+  width: 182px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .footer {
   padding-top: 55px;
@@ -1525,7 +1532,8 @@ table td {
   margin-right: 100px;
 }
 .modal {
-  max-width: 325px;
+  width: 325px;
+  border-radius: 5px;
 }
 .modal .title-h3 {
   text-align: center;
@@ -1536,6 +1544,27 @@ table td {
 .modal p a:hover,
 .modal p a:active {
   text-decoration: underline;
+}
+.modal--call {
+  width: 436px;
+}
+.modal--call .title-h5 {
+  color: #000;
+  text-align: center;
+}
+.modal--call .form__submit {
+  font-size: 16px;
+  font-weight: 400;
+  background-color: #cc0000;
+}
+.modal--call .form__submit:hover,
+.modal--call .form__submit:active {
+  background-color: #000;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+.modal--call p {
+  text-align: center;
 }
 .catalog .title-h2 {
   margin-top: 10px;
@@ -2520,6 +2549,9 @@ span.pagination__link {
   .related .swiper-button-prev {
     left: 5px;
   }
+  .blog__info {
+    width: 70%;
+  }
 }
 @media (max-width: 1022px) {
   .header__wrap {
@@ -2610,6 +2642,9 @@ span.pagination__link {
   .guest__btn {
     margin-left: 0;
   }
+  .blog__info {
+    width: 60%;
+  }
 }
 @media (max-width: 766px) {
   .header__block--address,
@@ -2668,6 +2703,17 @@ span.pagination__link {
   }
   .form__message {
     max-width: 100%;
+  }
+  .blog__wrap {
+    display: block;
+  }
+  .blog__img {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
+  .blog__info {
+    width: 100%;
   }
 }
 @media (max-width: 480px) {
